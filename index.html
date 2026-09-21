@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tarea 2 js</title>
+</head>
+<body bgcolor="#CCCCCC" text="#000000">
+
+<center>
+<h1>investigacion js</h1>
+<p>Alexa Mendoza Hernandez - 2530305 - Aplicaciones Web - Tarea no. 2</p>
+</center>
+
+<hr>
+
+<center>
+<button onclick="mostrar('intro')">introduccion</button>
+<button onclick="mostrar('fundamentos')">fundamentos</button>
+<button onclick="mostrar('flujo')">control de flujo</button>
+<button onclick="mostrar('funciones')">funciones</button>
+<button onclick="mostrar('objetos')">objetos</button>
+<button onclick="mostrar('otros')">otros temas</button>
+</center>
+
+<hr>
+
+<div id="intro">
+<h2>introduccion y contexto</h2>
+
+<p><b>1. ¿que es javascript y cuales son sus principales usos en la web?</b><br>
+JavaScript es un lenguaje de programación interpretado, esto quiere decir que necesita de un intérprete para su ejecución. En la mayoría de los casos es interpretado gracias a los navegadores, como Chrome, Edge o Firefox.<br>
+JavaScript sirve para crear de todo un poco:</p>
+<ul>
+<li>Páginas web: diseña la parte visual, haciendo que los sitios sean interactivos y animados.</li>
+<li>Servidores: controla la lógica interna y las bases de datos de una web.</li>
+<li>Aplicaciones móviles: permite crear apps para celulares.</li>
+<li>Videojuegos: permite hacer juegos sencillos que funcionan directo en el navegador, sin instalar nada.</li>
+</ul>
+
+<p><b>2. ¿en que año y con que proposito se creo javascript?</b><br>
+JavaScript fue creado en 1995 por Brendan Eich; su objetivo era permitir interactividad en las páginas web, algo revolucionario para la época. En solo 10 días, Eich desarrolló la primera versión, que se integró en el navegador Netscape Navigator.</p>
+
+<p><b>3. ¿por que javascript no es lo mismo que java?</b><br>
+Java es pesado y estructurado, usado para construir los motores de aplicaciones grandes como las de un banco o Android. JavaScript es ligero y ágil, pensado para ponerle botones interactivos, animaciones y color a los sitios web.</p>
+
+<p><b>4. ¿como se complementa javascript con html y css?</b><br>
+Los tres lenguajes son parte integrante de la creación de una página web funcional y visualmente atractiva. HTML proporciona el contenido y la estructura, CSS añade el diseño y el estilo, y JavaScript aporta elementos interactivos.</p>
+</div>
+
+<div id="fundamentos" style="display:none">
+<h2>fundamentos del lenguaje</h2>
+
+<p><b>5. ¿cual es la sintaxis basica de javascript y como se escriben comentarios?</b><br>
+Variables: hoy en día se usan principalmente let (valores que cambian) y const (valores fijos).</p>
+<pre>const nombre = "Ana"; // No cambia
+let edad = 25;         // Puede cambiar</pre>
+<p>Estructuras de control: se usan condiciones (if) y bucles (for, while).</p>
+<pre>if (edad >= 18) {
+  console.log("Es mayor de edad");
+} else {
+  console.log("Es menor de edad");
+}</pre>
+<p>Funciones: bloques de código que realizan una tarea específica.</p>
+<pre>function saludar(persona) {
+  return "¡Hola, " + persona + "!";
+}
+saludar("Ana");</pre>
+<p>Comentarios: una línea con //, varias líneas entre /* y */.</p>
+
+<p><b>6. ¿que diferencias hay entre var, let y const?</b></p>
+<ul>
+<li>var y let: permiten cambiar su valor en cualquier momento.</li>
+<li>const: es una constante; una vez asignado el valor no se puede volver a asignar (dará error).</li>
+</ul>
+
+<p><b>7. ¿cuales son los tipos de datos primitivos en javascript? da un ejemplo de cada uno.</b></p>
+<ul>
+<li>String: cadenas de texto. Ej: const nombre = "Carlos";</li>
+<li>Number: valores numéricos, enteros o con decimales. Ej: const precio = 19.99;</li>
+<li>Boolean: true o false. Ej: const esMayorDeEdad = true;</li>
+<li>Undefined: variable declarada sin valor asignado. Ej: let valor;</li>
+<li>Null: ausencia intencional de valor. Ej: const respuestaServidor = null;</li>
+<li>Symbol: identificador único e irrepetible. Ej: const idUnico = Symbol("id");</li>
+</ul>
+
+<p><b>8. ¿que diferencia hay entre un array y un objeto en javascript?</b></p>
+<ul>
+<li>Un array es como una lista del supermercado: importa el orden y se busca por posición. Usa corchetes.</li>
+<li>Un objeto es como una ficha de información: guarda datos etiquetados con un nombre. No importa el orden. Usa llaves.</li>
+</ul>
+
+<p><b>9. ¿que son y como se usan los operadores aritmeticos, logicos y relacionales?</b></p>
+<p>Aritméticos:</p>
+<table border="1" cellpadding="4">
+<tr><th>Operador</th><th>Nombre</th><th>Ejemplo</th><th>Resultado</th></tr>
+<tr><td>+</td><td>Suma</td><td>5+3</td><td>8</td></tr>
+<tr><td>-</td><td>Resta</td><td>10-4</td><td>6</td></tr>
+<tr><td>*</td><td>Multiplicacion</td><td>4*2</td><td>8</td></tr>
+<tr><td>/</td><td>Division</td><td>15/3</td><td>3</td></tr>
+<tr><td>%</td><td>Modulo</td><td>7%3</td><td>1</td></tr>
+<tr><td>**</td><td>Exponenciacion</td><td>2**3</td><td>8</td></tr>
+</table>
+<p>Relacionales (devuelven booleano):</p>
+<table border="1" cellpadding="4">
+<tr><th>Operador</th><th>Significado</th><th>Ejemplo</th><th>Resultado</th></tr>
+<tr><td>&gt;</td><td>Mayor que</td><td>10 &gt; 5</td><td>true</td></tr>
+<tr><td>&lt;</td><td>Menor que</td><td>3 &lt; 1</td><td>false</td></tr>
+<tr><td>===</td><td>Igualdad estricta</td><td>5 === "5"</td><td>false</td></tr>
+<tr><td>!==</td><td>Desigualdad estricta</td><td>5 !== 3</td><td>true</td></tr>
+</table>
+<p>Logicos:</p>
+<table border="1" cellpadding="4">
+<tr><th>Operador</th><th>Nombre</th><th>Descripcion</th></tr>
+<tr><td>&amp;&amp;</td><td>AND</td><td>true solo si ambas condiciones son verdaderas.</td></tr>
+<tr><td>||</td><td>OR</td><td>true si al menos una condicion es verdadera.</td></tr>
+<tr><td>!</td><td>NOT</td><td>invierte el valor.</td></tr>
+</table>
+</div>
+
+<div id="flujo" style="display:none">
+<h2>control de flujo</h2>
+
+<p><b>10. ¿como funcionan las sentencias condicionales if, else y switch?</b></p>
+<ul>
+<li>if: evalúa una condición; si es verdadera, ejecuta su bloque.</li>
+<li>else if: si la anterior fue falsa, evalúa una nueva condición opcional.</li>
+<li>else: caso por defecto, se ejecuta si ninguna condición anterior fue verdadera.</li>
+</ul>
+
+<p><b>11. ¿cuales son las diferencias entre los bucles for, while y do...while?</b></p>
+<ul>
+<li>for: cuando sabes exactamente cuántas veces repetir la acción.</li>
+<li>while: cuando no sabes cuántas veces se repetirá; evalúa la condición ANTES de ejecutar el código.</li>
+<li>do...while: igual que while, pero evalúa la condición DESPUÉS, así que el bloque se ejecuta al menos una vez.</li>
+</ul>
+
+<p><b>12. ¿para que sirven las palabras clave break y continue?</b><br>
+break cancela el ciclo por completo, como un freno de emergencia. continue solo se salta el paso actual y sigue con el siguiente sin detener el proceso.</p>
+</div>
+
+<div id="funciones" style="display:none">
+<h2>funciones</h2>
+
+<p><b>13. ¿como se declara una funcion y como se llama en javascript?</b><br>
+La forma clásica usa la palabra reservada function seguida del nombre:</p>
+<pre>function saludar(nombre) {
+  return "¡Hola, " + nombre + "!";
+}</pre>
+
+<p><b>14. ¿que significa que una funcion tenga parametros y un valor de retorno?</b><br>
+Los parámetros son los datos que entran a la función para que pueda trabajar. El valor de retorno es el resultado final que la función devuelve al terminar.</p>
+
+<p><b>15. ¿que son las funciones flecha (=>) y que ventajas tienen?</b><br>
+Son una sintaxis más corta y moderna para crear funciones. Reducen el código al no requerir la palabra function ni return en líneas simples.</p>
+
+<p><b>16. ¿que es el scope en javascript y como afecta a las variables?</b><br>
+El scope es la zona del código donde una variable existe y se puede usar; fuera de ahí, JavaScript no la encuentra.</p>
+<ul>
+<li>let y const: scope de bloque, quedan encerradas en el {} o función donde se crearon.</li>
+<li>var: ignora los bloques {} y solo respeta el scope de función, por eso puede causar errores.</li>
+</ul>
+</div>
+
+<div id="objetos" style="display:none">
+<h2>objetos y colecciones</h2>
+
+<p><b>17. ¿como se declara un objeto y como se accede a sus propiedades?</b><br>
+Un objeto es una ficha de datos entre llaves {} con parejas nombre: valor.</p>
+<pre>const usuario = { nombre: "Ana", edad: 25 };
+console.log(usuario.nombre);   // Ana
+console.log(usuario['edad']);  // 25</pre>
+
+<p><b>18. ¿que diferencia hay entre una propiedad y un metodo en un objeto?</b></p>
+<ul>
+<li>Propiedad: variable guardada en el objeto, un dato o característica.</li>
+<li>Método: función guardada en el objeto, una acción que puede realizar.</li>
+</ul>
+
+<p><b>19. menciona al menos 3 metodos basicos de los arrays (push, pop, map, etc.) y explica como funcionan.</b></p>
+<ul>
+<li>push(): agrega un elemento al final de la lista.</li>
+<li>pop(): saca y elimina el último elemento.</li>
+<li>map(): crea una nueva lista con cambios aplicados a cada elemento.</li>
+</ul>
+<p>Ejemplo con alimentos: con push añadimos algo al carrito, con pop quitamos el último, y con map aplicamos un descuento a todos los precios.</p>
+</div>
+
+<div id="otros" style="display:none">
+<h2>otros temas basicos</h2>
+
+<p><b>20. ¿que es el dom y por que es importante en el uso de javascript en paginas web?</b><br>
+El DOM es un mapa que convierte toda la página web en elementos que JavaScript puede entender y controlar. Permite modificar textos, cambiar colores, esconder cosas o responder al instante cuando el usuario hace clic, todo sin recargar la web.</p>
+
+<p><b>21. ¿que es un evento en javascript y menciona al menos 3 ejemplos comunes?</b></p>
+<ul>
+<li>click: el usuario presiona un botón o elemento.</li>
+<li>submit: se envían los datos de un formulario.</li>
+<li>keydown: se presiona una tecla del teclado.</li>
+</ul>
+
+<p><b>22. ¿cual es la diferencia entre alert, prompt y console.log?</b></p>
+<ul>
+<li>alert(): ventana emergente para avisar algo (detiene la página hasta dar clic en Aceptar).</li>
+<li>prompt(): ventana emergente para pedir un dato al usuario.</li>
+<li>console.log(): mensaje oculto en herramientas de desarrollador, solo lo ve el programador.</li>
+</ul>
+
+<p><b>23. ¿como se abre la consola del navegador y que ventajas tiene usarla para depurar codigo?</b><br>
+Se presiona F12 (o clic derecho → Inspeccionar) y se abre la pestaña Consola.</p>
+<ul>
+<li>Te avisa de los errores: muestra el problema en texto rojo y en qué línea ocurrió.</li>
+<li>Pruebas al instante: puedes escribir y probar código ahí mismo, sin guardar ni reiniciar nada.</li>
+</ul>
+</div>
+
+<hr>
+<center><p>Alexa Mendoza Hernandez - Universidad Politecnica de Victoria</p></center>
+
+<script>
+function mostrar(id){
+  var secciones = ["intro","fundamentos","flujo","funciones","objetos","otros"];
+  for(var i=0; i<secciones.length; i++){
+    document.getElementById(secciones[i]).style.display = "none";
+  }
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>
