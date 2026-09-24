@@ -1,13 +1,13 @@
-// Creamos la variable numero
+// Se crea la variable numero
 let numero = 6; 
 
 console.log("--- Tabla de multiplicar del " + numero + " ---");
 
-// Creamos el ciclo 'for' que avanza del 1 al 10
+// Se crea el ciclo 'for' que avanza del 1 al 10
 for (let i = 1; i <= 10; i++) {
-  // Calculamos el resultado de cada multiplicación
+  // Se calcula el resultado de cada multiplicación
   let resultado = numero * i;
 
-  //  Mostramos el mensaje 
+  //  Se muestra el mensaje el 
   console.log(numero + " x " + i + " = " + resultado);
 }
