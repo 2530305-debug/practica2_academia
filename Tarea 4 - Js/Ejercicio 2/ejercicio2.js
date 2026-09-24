@@ -8,6 +8,6 @@ for (let i = 1; i <= 10; i++) {
   // Se calcula el resultado de cada multiplicación
   let resultado = numero * i;
 
-  //  Se muestra el mensaje el 
+  //  Se muestra el mensaje  
   console.log(numero + " x " + i + " = " + resultado);
 }
